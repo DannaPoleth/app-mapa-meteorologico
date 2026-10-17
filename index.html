@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador Geográfico Profesional</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>🌍 Localizador Geográfico Global 🌍</h1>
+        <p>Consumo de API OpenStreetMap con control de versiones integral.</p>
+        <p>Por: Danna Poleth</p>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input
+                type="text"
+                id="city-input"
+                placeholder="Introduce un lugar (ej. Lerma, Madrid)"
+                aria-label="Lugar que deseas consultar"
+            >
+            <button id="search-btn">Consultar API</button>
+        </div>
+
+        <div id="weather-card" class="weather-card" aria-live="polite">
+            <p>Introduce una ubicación para desplegar las coordenadas
+            y la descripción geográfica.</p>
+        </div>
+
+        <section class="map-container">
+            <h2>🗺️ Mapa de ubicación</h2>
+            <iframe
+                id="location-map"
+                title="Mapa interactivo de la ubicación"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-99.8%2C19.2%2C-99.3%2C19.6&layer=mapnik"
+                loading="lazy">
+            </iframe>
+            <p>
+                <a
+                    id="map-link"
+                    href="https://www.openstreetmap.org/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Ver mapa ampliado
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Aplicación desarrollada para la asignatura IAW por Danna Poleth Librado Hernández.</p>
+        <p>Mapa: OpenStreetMap</p>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>
